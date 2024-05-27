@@ -1,11 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import { useRef, useState, useEffect, HTMLAttributes } from "react";
+import { HTMLAttributes, useRef, useState, useEffect } from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
-import Phone from "@/components/Phone";
+import Phone from "./Phone";
 
 const PHONES = [
   "/testimonials/1.jpeg",
@@ -64,7 +63,7 @@ function ReviewColumn({
   return (
     <div
       ref={columnRef}
-      className={cn("animate-marquee space-y-9 py-4", className)}
+      className={cn("animate-marquee space-y-8 py-4", className)}
       style={{ "--marquee-duration": duration } as React.CSSProperties}
     >
       {reviews.concat(reviews).map((imgSrc, reviewIndex) => (
@@ -122,7 +121,7 @@ function ReviewGrid() {
   return (
     <div
       ref={containerRef}
-      className="relative -mx-4 mt-16 grid h-[49rem] max-h-[150vh] grid-cols-1 items-start gap-8 overflow-hidden px-4 sm:mt-20 md:grid border border-black"
+      className="relative -mx-4 mt-16 grid h-[49rem] max-h-[150vh] grid-cols-1 items-start gap-8 overflow-hidden px-4 sm:mt-20 md:grid-cols-2 lg:grid-cols-3"
     >
       {isInView ? (
         <>
@@ -136,8 +135,23 @@ function ReviewGrid() {
             }
             msPerPixel={10}
           />
+          <ReviewColumn
+            reviews={[...column2, ...column3[1]]}
+            className="hidden md:block"
+            reviewClassName={(reviewIndex) =>
+              reviewIndex >= column2.length ? "lg:hidden" : ""
+            }
+            msPerPixel={15}
+          />
+          <ReviewColumn
+            reviews={column3.flat()}
+            className="hidden md:block"
+            msPerPixel={10}
+          />
         </>
       ) : null}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-slate-100" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-100" />
     </div>
   );
 }
@@ -145,12 +159,11 @@ function ReviewGrid() {
 export function Reviews() {
   return (
     <MaxWidthWrapper className="relative max-w-5xl">
-      <Image
+      <img
         aria-hidden="true"
         className="absolute select-none hidden xl:block -left-32 top-1/3"
         src="/what-people-are-buying.png"
         alt="what-people-are-buying"
-        fill
       />
 
       <ReviewGrid />

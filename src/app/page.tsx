@@ -18,8 +18,8 @@ export default function Home() {
                 Your image on a{" "}
                 <span className="bg-green-600 px-2 text-white rounded-md">
                   Custom
-                </span>
-                {" "}Phone Case
+                </span>{" "}
+                Phone Case
               </h1>
               <p className="mt-9 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
                 Capture your favourite memories with your own,{" "}
@@ -218,7 +218,9 @@ export default function Home() {
           </div>
         </MaxWidthWrapper>
 
-        <div className="pt-16">{/* <Reviews /> */}</div>
+        <div className="pt-16">
+          <Reviews />
+        </div>
       </section>
     </div>
   );
