@@ -12,17 +12,17 @@ export default function Home() {
           <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
             <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="absolute w-28 left-0 -top-20 hidden lg:block">
-                <img src="/snake-1.png" alt="snake-image" className="w-full" />{" "}
+                <img src="/snake-1.png" alt="snake-image" className="w-full" />
               </div>
               <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-7xl">
-                Your image on a{" "}
+                Your image on a
                 <span className="bg-green-600 px-2 text-white rounded-md">
                   Custom
-                </span>{" "}
+                </span>
                 Phone Case
               </h1>
               <p className="mt-9 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
-                Capture your favourite memories with your own,{" "}
+                Capture your favourite memories with your own,
                 <span className="font-semibold">one-on-one</span> phone case.
                 Covershop allows you to protect your memories, not just your
                 phone case.
@@ -120,11 +120,11 @@ export default function Home() {
         <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
           <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
             <h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-5xl md:text-6xl text-gray-900">
-              What our{" "}
+              What our
               <span className="relative px-2">
-                customers{" "}
+                customers
                 <Icons.underline className="hidden sm:block pointer-events-none absolute inset-x-0 -bottom-6 text-green-500" />
-              </span>{" "}
+              </span>
               say
             </h2>
 
@@ -144,7 +144,7 @@ export default function Home() {
               <div className="text-lg leading-8">
                 <p>
                   "The case feels durable and I even got a compliment on the
-                  design. Had the case for 2.5 months and{" "}
+                  design. Had the case for 2.5 months and
                   <span className="p-0.5 bg-slate-800 text-white rounded-md">
                     the image is super clear
                   </span>
@@ -185,7 +185,7 @@ export default function Home() {
                   "I usually keep my phone together with my keys in my pocket
                   and that led to some pretty heavy scratch marks on all of my
                   last phone cases. This one, besides, a barely noticeable
-                  scratch on the corner,{" "}
+                  scratch on the corner,
                   <span className="p-0.5 bg-slate-800 text-white rounded-md">
                     looks brand-new after about half a year
                   </span>
@@ -212,9 +212,7 @@ export default function Home() {
           </div>
         </MaxWidthWrapper>
 
-        <div className="pt-16">
-          {/* <Reviews /> */}
-        </div>
+        <div className="pt-16">{/* <Reviews /> */}</div>
       </section>
     </div>
   );
