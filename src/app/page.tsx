@@ -1,3 +1,4 @@
+import Image from "next/image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Check, Star } from "lucide-react";
 import Phone from "@/components/Phone";
@@ -12,7 +13,13 @@ export default function Home() {
           <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
             <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="absolute w-28 left-0 -top-20 hidden lg:block">
-                <img src="/snake-1.png" alt="snake-image" className="w-full" />
+                <Image
+                  src="/snake-1.png"
+                  alt="snake-image"
+                  className="w-full"
+                  width={112}
+                  height={112}
+                />
               </div>
               <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-7xl">
                 Your image on a
@@ -48,34 +55,39 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 mt-12">
                 <div className="flex -space-x-4">
-                  <img
+                  <Image
                     src="/users/user-1.png"
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
                     alt="user-1"
+                    fill
                   />
 
-                  <img
+                  <Image
                     src="/users/user-2.png"
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-200"
                     alt="user-2"
+                    fill
                   />
 
-                  <img
+                  <Image
                     src="/users/user-3.png"
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-200"
                     alt="user-3"
+                    fill
                   />
 
-                  <img
+                  <Image
                     src="/users/user-4.jpeg"
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-200"
                     alt="user-4"
+                    fill
                   />
 
-                  <img
+                  <Image
                     src="/users/user-5.jpeg"
                     className="object-cover inline-block h-10 w-10 rounded-full ring-2 ring-slate-200"
                     alt="user-5"
+                    fill
                   />
                 </div>
 
@@ -97,16 +109,18 @@ export default function Home() {
 
           <div className="flex justify-center col-span-full lg:col-span-1 w-full px-8 sm:px-16 md:px-0 mt-32 lg:mx-0 lg:mt-20 h-fit">
             <div className="relative md:max-w-xl">
-              <img
+              <Image
                 src="your-image.png"
                 className="absolute w-40 lg:w-52 left-56 -top-20 select-none hidden sm:block lg:hidden xl:block"
                 alt="your-image"
+                fill
               />
 
-              <img
+              <Image
                 src="/line.png"
                 className="absolute w-20 -left-6 -bottom-6 select-none"
                 alt="line"
+                fill
               />
 
               <Phone className="w-64" imgSrc="/testimonials/1.jpeg" />
@@ -128,7 +142,13 @@ export default function Home() {
               say
             </h2>
 
-            <img src="/snake-2.png" className="w-24 order-0 lg:order-2" />
+            <Image
+              src="/snake-2.png"
+              className="w-24 order-0 lg:order-2"
+              alt="snake-2"
+              width={40}
+              height={40}
+            />
           </div>
 
           <div className="mx-auto grid max-w-2xl grid-cols-1 px-4 lg:mx-0 lg:max-w-none lg-grid-cols-2 gap-y-16">
@@ -143,21 +163,22 @@ export default function Home() {
 
               <div className="text-lg leading-8">
                 <p>
-                  "The case feels durable and I even got a compliment on the
-                  design. Had the case for 2.5 months and
+                  &quot;The case feels durable and I even got a compliment on
+                  the design. Had the case for 2.5 months and
                   <span className="p-0.5 bg-slate-800 text-white rounded-md">
                     the image is super clear
                   </span>
                   , on the case I had before, the image started fading into
-                  yellow-ish colour after couple weeks. Love it."
+                  yellow-ish colour after couple weeks. Love it.&quot;
                 </p>
               </div>
 
               <div className="flex gap-4 mt-2">
-                <img
+                <Image
                   className="rounded-full h-12 w-12 object-cover"
                   src="/users/user-1.png"
                   alt="user-1"
+                  fill
                 />
 
                 <div className="flex flex-col">
@@ -182,22 +203,24 @@ export default function Home() {
 
               <div className="text-lg leading-8">
                 <p>
-                  "I usually keep my phone together with my keys in my pocket
-                  and that led to some pretty heavy scratch marks on all of my
-                  last phone cases. This one, besides, a barely noticeable
+                  &quot;I usually keep my phone together with my keys in my
+                  pocket and that led to some pretty heavy scratch marks on all
+                  of my last phone cases. This one, besides, a barely noticeable
                   scratch on the corner,
                   <span className="p-0.5 bg-slate-800 text-white rounded-md">
                     looks brand-new after about half a year
                   </span>
-                  . I dig it. "
+                  . I dig it.&quot;
                 </p>
               </div>
 
               <div className="flex gap-4 mt-2">
-                <img
+                <Image
                   className="rounded-full h-12 w-12 object-cover"
                   src="/users/user-2.png"
                   alt="user-2"
+                  fill
+                  // objectFit="cover"
                 />
 
                 <div className="flex flex-col">
